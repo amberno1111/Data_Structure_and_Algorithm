@@ -12,4 +12,4 @@ class Solution(object):
         :type num: int
         :rtype: int
         """
-        return (num - 1) % 9 + 1
+        return (num - 1) % 9 + 1 if num > 0 else 0
