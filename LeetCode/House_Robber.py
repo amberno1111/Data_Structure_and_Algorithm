@@ -23,9 +23,14 @@ class Solution(object):
 
 
 class Solution1(object):
-    take, nontake, maxprofit = 0, 0, 0
-    for i in range(len(nums)):
-        take = nontake + nums[i]
-        nontake = maxprofit
-        maxprofit = max(take, nontake)
-    return maxprofit
+    def rob(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        take, nontake, maxprofit = 0, 0, 0
+        for i in range(len(nums)):
+            take = nontake + nums[i]
+            nontake = maxprofit
+            maxprofit = max(take, nontake)
+        return maxprofit
